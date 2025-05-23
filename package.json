@@ -10,5 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "rest_api_node_ts_server": "file:"
+  },
+  "type": "module",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
