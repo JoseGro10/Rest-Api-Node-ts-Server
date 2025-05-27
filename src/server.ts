@@ -1,5 +1,18 @@
 import express from 'express'
 import router from './router'
+import db from './conifg/db'
+
+//Conectar a base de datos
+async function connectDB(){
+    try {
+        await db.authenticate()
+        db.sync()
+        console.log('Conexión a la base de datos establecida correctamente.')
+    }catch (error){
+        console.error('Error al conectar a la base de datos: ', error)
+    }
+}
+connectDB()
 
 const server = express()
 
