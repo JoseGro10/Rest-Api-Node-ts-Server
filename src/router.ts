@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import { createProduct } from './handlers/product'
 
 const router = Router()
 
@@ -7,9 +8,7 @@ router.get('/', (req, rs) => {
     rs.send('¡Hola, mundo! Esta es una API REST con Express y TypeScript.') 
 })
 
-router.post('/', (req, res) => {
-    res.json("Desde POST: ¡Hola, mundo! Esta es una API REST con Express y TypeScript.")
-})
+router.post('/', createProduct).
 
 router.put('/', (req, res) => {
     res.json("Desde PUT: ¡Hola, mundo! Esta es una API REST con Express y TypeScript.")
