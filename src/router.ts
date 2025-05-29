@@ -8,7 +8,7 @@ router.get('/', (req, rs) => {
     rs.send('¡Hola, mundo! Esta es una API REST con Express y TypeScript.') 
 })
 
-router.post('/', createProduct).
+router.post('/', createProduct)
 
 router.put('/', (req, res) => {
     res.json("Desde PUT: ¡Hola, mundo! Esta es una API REST con Express y TypeScript.")
