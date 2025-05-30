@@ -1,14 +1,12 @@
 import { Router } from 'express'
 import { body } from 'express-validator'
-import { createProduct } from './handlers/product'
+import { createProduct, getProducts } from './handlers/product'
 import { handleInputErrors } from './middleware'
 
 const router = Router()
 
 //Routing
-router.get('/', (req, rs) => {
-    rs.send('¡Hola, mundo! Esta es una API REST con Express y TypeScript.') 
-})
+router.get('/', getProducts)
 
 router.post('/', 
     //Validacion
