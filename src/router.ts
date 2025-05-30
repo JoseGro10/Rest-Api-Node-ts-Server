@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { body, param } from 'express-validator'
-import { createProduct, getProductById, getProducts } from './handlers/product'
+import { createProduct, getProductById, getProducts, updateProduct } from './handlers/product'
 import { handleInputErrors } from './middleware'
 
 const router = Router()
@@ -24,9 +24,7 @@ router.post('/',
     createProduct
 )
 
-router.put('/', (req, res) => {
-    res.json("Desde PUT: ¡Hola, mundo! Esta es una API REST con Express y TypeScript.")
-})
+router.put('/:id', updateProduct)
 
 router.patch('/', (req, res) => {
     res.json("Desde PATCH: ¡Hola, mundo! Esta es una API REST con Express y TypeScript.")
