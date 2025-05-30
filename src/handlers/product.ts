@@ -15,6 +15,21 @@ export const getProducts = async (req: Request, res: Response) => {
     res.send('¡Hola, mundo! Esta es una API REST con Express y TypeScript.') 
 }
 
+export const getProductById = async (req: Request, res: Response) => {
+    try{
+        const { id } = req.params
+        const product = await Product.findByPk(id)
+
+        if(!product){
+            return res.status(404).json({message: 'Producto no encontrado'})
+        }
+        res.json({data: product, message: 'Producto obtenido exitosamente'})
+    }catch(error){
+        console.log(error)
+    }
+    res.send('¡Hola, mundo! Esta es una API REST con Express y TypeScript.') 
+}
+
 export const createProduct = async (req: Request, res : Response) => {
     try{
         const product = await Product.create(req.body)
