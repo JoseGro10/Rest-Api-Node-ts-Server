@@ -54,3 +54,7 @@ export const updateProduct = async (req: Request, res: Response) => {
     res.json({ data: product, message: 'Producto actualizado exitosamente' })
 
 }
+
+export const updateAvailable = async (req: Request, res: Response) => {
+    
+}
