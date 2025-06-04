@@ -40,8 +40,7 @@ DATABASE_URL=tu_url_de_base_de_datos
 ## Ramas existentes
 
 - **main**: Rama principal con el código estable.
-- **dev**: Rama de desarrollo (si existe).
-- (Agrega aquí otras ramas que tengas en tu repositorio)
+- **feauture/Testing-superTest**: Rama para realizar pruebas con superTest.
 
 ## Cómo ejecutar el proyecto
 
